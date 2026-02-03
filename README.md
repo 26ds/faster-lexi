@@ -6,6 +6,8 @@
 > **Development Paradigm**: AI-Assisted Engineering (Human-in-the-loop Architecture)
 
 ## Abstract & Core Value Proposition
+ 
+
 
 ### The Problem: Sycophancy Bias in LLMs & Solution with rationality
 Current Large Language Models (LLMs) often exhibit **"Sycophancy Bias"**—prioritizing user sentiment over strategic outcomes. In high-stakes scenarios like legal negotiations, this behavior can be detrimental. For example, if a user is angry, a standard LLM might draft an aggressive email that validates their emotions but sabotages their legal standing.
@@ -33,18 +35,16 @@ For users, LexiGuard acts as a **strategic shield**. The workflow ensures safety
 To maintain a clear project structure, I have broken down the core architecture of LexiGuard into the following five detailed documents. 
 Please click the links to explore them in depth.
 
-| Doc ID | Component (模块) | Description (说明) |
+| Module ID | Component | Description |
 | :--- | :--- | :--- |
-| **01** | [**Context Construction**](./docs/01-context-construction.md) | **上下文构建**：解释初始 Context 如何通过问答被组装和初始化。 |
-| **02** | [**Live Context**](./docs/02-live-context.md) | **实时上下文**：管理动态对话流中的 token 优化与历史重写。 |
-| **03** | [**Intervention Layer**](./docs/03-intervention-layer.md) | **干预层机制**：AI 的"超我"，负责安全检查、情感阻断与结果对齐。 |
-| **04** | [**Intent Control**](./docs/04-intent-control.md) | **意图控制**：UI/UX 逻辑，区分“分析模式”与“起草模式”的意图识别。 |
-| **05** | [**Legal Assets**](./docs/05-legal-assets.md) | **法律资产管理**："橙线"协议，负责证据验证、管辖权逻辑与动态发现。 |
+| **01** | [**Context Construction**](./docs/01-context-construction.md) | **The Foundation:** Explains how the initial context is constructed via Socratic questioning to establish a ground truth before strategy generation. |
+| **02** | [**Live Context**](./docs/02-live-context.md) | **Memory Management:** Manages token optimization and history rewriting in dynamic conversation flows, implementing a "Manual Attention Mechanism." |
+| **03** | [**Intervention Layer**](./docs/03-intervention-layer.md) | **The "Super-Ego":** Acts as a safety guardrail. It intercepts high-risk prompts, blocks emotional venting, and enforces alignment with the user's Ultimate Goal. |
+| **04** | [**Intent Control**](./docs/04-intent-control.md) | **Logic Hierarchy:** Defines an intent-aware decision pipeline integrated into the UI/UX and strictly distinguishes between "Analysis Mode" and "Drafting Mode" to prevent scope creep. |
+| **05** | [**Legal Assets**](./docs/05-legal-assets.md) | **The "Orange Line" Protocol:** A state machine for evidence verification (Verified vs. Pending), jurisdiction logic, and dynamic asset discovery. |
 
-### System Architect Role
-- **Human Role**: Defined State Machines, Intervention Logic, "Yellow/Orange Line" Protocols.
-- **AI Role**: Generated Python/Streamlit code scaffolding and optimized prompt chains.
 
+ 
 ---
 
 ##  Run Locally
@@ -74,3 +74,6 @@ To run lexiguard locally, please following:
 <img width="2209" height="1174" alt="image" src="https://github.com/user-attachments/assets/2e0abc07-a06b-4870-8e62-f8d8abef9453" />
 
 <img width="2231" height="1176" alt="image" src="https://github.com/user-attachments/assets/c4bf8d6b-f198-426d-a7f3-e91d68ca8159" />
+
+### License & Copyright
+© 2026 Quan Zhang. All Rights Reserved.
