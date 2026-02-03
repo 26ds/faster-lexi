@@ -39,6 +39,7 @@ To eliminate "Garbage In, Garbage Out" by verifying facts and legal assets *befo
 ### Step 4: The Analysis Lock (Transition State)
 - **Mechanism**: A full UI lock prevents the user from starting the chat while the AI processes the verified data.
 - **Purpose**: Ensures the Main Chat starts with a fully converged context, avoiding "context drift."
+- **Visual Reference** <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/ed40fd6b-b20c-4500-9dc4-8c334f86236b" />
 
 ### Step 5: Persistence & Handoff
 - **Context Item #0**: The "Final Synthesized Story" is encapsulated as the mutable **"Background Story"** item in the Live Context sidebar (Default ☑️).
