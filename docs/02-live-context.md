@@ -12,7 +12,8 @@ Every conversation turn is encapsulated as a `ContextItem` object with a lifecyc
 - **Display Title**: AI-generated 10-15 word summary.
 - **Full Summary**: Includes Counterparty Input + User Reply + Emotional State + Strategic Intent.
 - **Status**: `Active` (Checked) / `Inactive` (Unchecked) / `Modified` (Triggered after user edit & confirm).
-- **Visual Reference**: *(Insert Image: Right Sidebar Context Items)*
+- **Visual Reference**: *<img width="334" height="602" alt="image" src="https://github.com/user-attachments/assets/e32e95ac-73a3-4231-b87c-94a1c19228d1" />*
+
 
 ## 2.3 Selective Injection Mechanism
 - **Logic**: Instead of feeding the entire chat history to the LLM, we use a **"Manual Attention Mechanism"**.
