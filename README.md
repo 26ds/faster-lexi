@@ -43,6 +43,37 @@ Please click the links to explore them in depth.
 | **04** | [**Intent Control**](./docs/04-intent-control.md) | **Logic Hierarchy:** Defines an intent-aware decision pipeline integrated into the UI/UX and strictly distinguishes between "Analysis Mode" and "Drafting Mode" to prevent scope creep. |
 | **05** | [**Legal Assets**](./docs/05-legal-assets.md) | **The "Orange Line" Protocol:** A state machine for evidence verification (Verified vs. Pending), jurisdiction logic, and dynamic asset discovery. |
 
+---
+
+## Performance & UX Engineering
+
+LexiGuard is engineered for both depth of reasoning and speed of execution, utilizing a dual-model architecture.
+
+*   **Async Streaming Architecture:**
+    *   Implemented `getLexiguardStrategyStream` and `synthesizeContextStream` using **AsyncGenerators** in `MainWorkspace.tsx` and `ContextBuilder.tsx`.
+    *   Moved from blocking HTTP calls to **Chunk-based Streaming**, significantly reducing the user's Time-to-First-Byte (TTFB) perception.
+
+*   **Dual-Mode Rendering Logic:**
+    *   **Pro Model (Sparkle):** Used for deep strategy. Includes a "Reasoning State" (default mode) before streaming to reflect complex logic processing.
+    *   **Flash Model (Bolt):** Used for "Answer Now" actions. Optimized for instant execution with minimized latency overhead while retaining full logic constraints.
+
+---
+
+##   Future Roadmap & Optimizations
+
+We are actively iterating on the following features to move from MVP to a production-grade vertical SaaS.
+
+####  UI/UX Polish (Frontend)
+*   **Granular Token-Level Streaming:** Currently, the stream yields text chunks. Future iterations will implement a **smooth typewriter effect** (character-by-character rendering) to mimic natural AI interaction.
+*   **Visual Transitions:** Enhance the "Legal Asset" generation animation. Plan to add dynamic expansion animations for the Yellow/Orange boxes as content streams in, replacing static resizing.
+*   **Mobile Responsiveness:** Refactor the 3-column layout (Sidebar/Main/Context) for seamless usability on mobile devices.
+
+####  Legal Knowledge Engine (Hybrid RAG)
+*   **Ground-Truth First Architecture:** Currently, legal asset discovery relies on the LLM's internal knowledge.
+*   **Planned Logic Upgrade:** Implementing a **Tiered Retrieval System** for US jurisdictions:
+    1.  **Tier 1 (Primary):** Query a structured, verified **US Legal Database** (e.g., integrating a Vector Database populated with Caselaw Access Project data).
+    2.  **Tier 2 (Fallback):** Trigger AI Web Search only if the specific statute is not found in the primary database.
+*   **Goal:** To eliminate hallucinated citations and ensure every "Legal Asset" is backed by verifiable statutes.
 
  
 ---
