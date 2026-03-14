@@ -107,4 +107,4 @@ To run lexiguard locally, please following:
 <img width="2231" height="1176" alt="image" src="https://github.com/user-attachments/assets/c4bf8d6b-f198-426d-a7f3-e91d68ca8159" />
 
 ### License & Copyright
-© 2026 John Zhang. All Rights Reserved.
+© 2026 Quan Zhang. All Rights Reserved.
